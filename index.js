@@ -39,11 +39,11 @@ const iface = new ethers.utils.Interface(abi.erc20);
   ]);
 
   // parse response
-  const balanceOf = parseNumber(response[0][1]);
-  const totalSupply = parseNumber(response[1][1]);
-  const name = parseString(response[2][1]);
-  const symbol = parseString(response[3][1]);
-  const decimals = parseNumber(response[4][1]);
+  const balanceOf = parseNumber(response[0].returnData);
+  const totalSupply = parseNumber(response[1].returnData);
+  const name = parseString(response[2].returnData);
+  const symbol = parseString(response[3].returnData);
+  const decimals = parseNumber(response[4].returnData);
 
   console.log({ balanceOf, totalSupply, name, symbol, decimals });
 })();
