@@ -60,11 +60,11 @@ function parseString(_str) {
   try {
     // parse 0x0000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000a5465746865722055534400000000000000000000000000000000000000000000 to 54657468657220555344
     const hex = _str.slice(130).replace(/^0+|0+$/g, "");
+    // 54657468657220555344 to Tether USD
     let str = "";
     for (let n = 0; n < hex.length; n += 2) {
       str += String.fromCharCode(parseInt(hex.substr(n, 2), 16));
     }
-    // convert hex to string
     return str;
   } catch (err) {
     return null;
