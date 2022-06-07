@@ -8,8 +8,8 @@ const iface = new ethers.utils.Interface(abi.erc20);
 (async () => {
   // set args
   const _provider = new ethers.providers.JsonRpcProvider("https://mainnet.infura.io/v3/858f183c2d0b4483bc6c44cfbd9883bf");
-  const _contract = "0xdAC17F958D2ee523a2206206994597C13D831ec7";
-  const _address = "0xD910F15d5C925Bdbd0733856Cf609fd107f2516e";
+  const _contract = "0xdAC17F958D2ee523a2206206994597C13D831ec7"; // erc20 contract
+  const _address = "0xD910F15d5C925Bdbd0733856Cf609fd107f2516e"; // user address
 
   // interact with multicall contract
   const contract = new ethers.Contract(multicallAddress, abi.multicall, _provider);
